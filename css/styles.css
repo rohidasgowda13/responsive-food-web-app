@@ -135,7 +135,7 @@ img{
 @media screen and (max-width: 768px){
     .nav__menu{
         position: fixed;
-        top: var(--header-height);
+        top: -100%;
         left: 0;
         width: 100%;
         padding: 1.5rem 0 1rem;
@@ -172,4 +172,49 @@ img{
 .nav__toggle{
     font-size: 1.3rem;
     cursor: pointer;
+}
+
+/* show menu */
+.show-menu{
+    top: var(--header-height);
+}
+
+/* active menu */
+.active-link{
+    color: var(--first-color);
+}
+
+/* change background color */
+.scroll-header{
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Scroll top */
+.scrolltop{
+    position: fixed;
+    right: 1rem;
+    bottom: -20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .3rem;
+    background: rgba(6, 156, 84, .5);
+    border-radius: .4rem;
+    transition: .4s;
+    visibility: hidden;
+}
+
+.scrolltop:hover{
+    background-color: var(--first-color);
+}
+
+.scrolltop__icon{
+    font-size: 1.8rem;
+    color: var(--body-color);
+}
+
+/* show scrolltop */
+.scroll-top{
+    visibility: visible;
+    bottom: 1.5rem;
 }
